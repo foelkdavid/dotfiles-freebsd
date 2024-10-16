@@ -13,7 +13,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#777c66'
 
 export TASKRC=~/Sync/Taskwarrior/taskrc
 export TASKDATA=~/Sync/Taskwarrior/data
-
+export TERM=xterm
 # disable termfreeze on ctrl-s
 stty stop undef
 
