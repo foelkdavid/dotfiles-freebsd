@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # auto suggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.config/zsh/plugins/zsh-autosuggestions
 
