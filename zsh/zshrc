@@ -1,4 +1,5 @@
-# source aliases file
+# zsh config:
+## source aliases file
 source $HOME/.config/zsh/aliases
 
 # autocd into typed dir
@@ -11,9 +12,9 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#777c66'
 
-export TASKRC=~/Sync/Taskwarrior/taskrc
-export TASKDATA=~/Sync/Taskwarrior/data
+# make remote ssh work on lesser used terminals
 export TERM=xterm
+
 # disable termfreeze on ctrl-s
 stty stop undef
 
@@ -33,16 +34,10 @@ HISTFILE=$HOME/.cache/zsh/histfile.txt
 HISTSIZE=10000
 SAVEHIST=10000
 
-# adding locations to PATH
+# adding locations to PATH (user scripts and bins)
 export PATH="$HOME/.local/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/opt/texlive/2023/bin/x86_64-linux:$PATH"
-
-
-# adding flatpak support
-export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$XDG_DATA_DIRS"
-export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
+#export PATH="/opt/texlive/2023/bin/x86_64-linux:$PATH"
 
 # import plugins
 source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
