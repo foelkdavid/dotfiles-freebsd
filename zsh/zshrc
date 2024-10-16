@@ -1,3 +1,7 @@
+# set runtime dir
+export XDG_RUNTIME_DIR=/var/run/user/`id -u`
+
+
 # source aliases file
 source $HOME/.config/zsh/aliases
 
