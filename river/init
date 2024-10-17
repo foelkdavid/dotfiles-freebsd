@@ -23,7 +23,6 @@ riverctl keyboard-layout -variant ,bone -options "grp:ctrl_space_toggle" de,de
 
 ## enable touchpad tap
 riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad tap enabled
-
 ## lock screen
 #riverctl map normal Super L spawn blurlock
 
@@ -34,8 +33,10 @@ riverctl map normal Super+Shift S spawn 'grim -g "$(slurp -d)" - | wl-copy -t im
 riverctl map normal Super Return spawn alacritty
 
 ## start app-launcher
-#riverctl map normal Super D spawn 'tofi-drun | xargs -d \" riverctl spawn'
+riverctl map normal Super D spawn 'tofi-drun | xargs -d \" riverctl spawn'
 
+# riverctl map normal Super D spawn 'tofi-drun || tr ':' '\n' | xargs -d " riverctl spawn'
+riverctl map normal Super D spawn 'tofi-drun | tr "\" "\n" | xargs "riverctl spawn"'
 # close window
 riverctl map normal Super Q close
 
