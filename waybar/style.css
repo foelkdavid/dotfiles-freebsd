@@ -55,7 +55,7 @@ window#waybar {
 
 
   #custom-icon {
-    color: @gruvboxgreen;
+    color: @gruvboxred;
     font-size: 2rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;

@@ -2,8 +2,13 @@
     "layer": "top",
     "spacing": 12,
     "modules-left": ["river/tags"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/icon"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["battery", "custom/icon"],
+
+    // configures clock
+    "clock": {
+    	"format-alt": "{:%a, %d, %b  %H:%M}"
+    },
 
     // configures the tags for river. choose depending on your preferences
     "river/tags": {
@@ -43,6 +48,12 @@
         //"format-good": "󱟢", // An empty format will hide the module
         "format-full": "󰁹",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"]
-    }
+    },
 
+    // configures custom clock widget
+    // todo: add alt design
+    "custom/clock": {
+        "format": "{}",
+        "exec": "date +'%H:%M'",
+    }
 }
