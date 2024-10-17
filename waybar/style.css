@@ -1,0 +1,69 @@
+@import "colors.css";
+
+window#waybar {
+  background-color: @gruvboxblack;
+  color: @gruvboxwhite;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  font-size:1rem;
+}
+
+#tags button{
+    color: @gruvboxblack;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    font-size: 1.85rem;
+  }
+  
+  #tags button.occupied{
+    color: @gruvboxwhite;
+  }
+
+  #tags button.focused{
+    color: @gruvboxgreen;
+  }
+
+  #tags button.urgent{
+    color: @gruvboxyellow;
+  }
+
+  #battery {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2rem;
+    color: @gruvboxwhite;
+  }
+  
+  /* #battery.charging, #battery.plugged {
+    color: @gruvboxgreen;
+  } */
+  
+  #battery.warning {
+    /** color: @gruvboxyellow; **/
+    color: @gruvboxyellow;
+  }
+  
+  #battery.critical {
+    color: @gruvboxred;
+  }
+
+  #battery.full {
+    color: @gruvboxgreen;
+  }
+
+
+  #custom-icon {
+    color: @gruvboxgreen;
+    font-size: 2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0;
+    padding-right:0.4rem;
+  }
+
+  .modules-center {
+    color: @gruvboxwhite;
+    font-size: 1.7rem;
+  }

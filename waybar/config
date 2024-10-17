@@ -1,0 +1,48 @@
+{
+    "layer": "top",
+    "spacing": 12,
+    "modules-left": ["river/tags"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/icon"],
+
+    // configures the tags for river. choose depending on your preferences
+    "river/tags": {
+        "num-tags": 10,
+        "tag-labels": ["","󰅩","󰈹","","󰲨","󰍫","󰍩","󰃮","", "󰁄"]
+        // "tag-labels": ["󰲠","󰲢","󰲤","󰲦","󰲨","󰲪","󰲬","󰲮","󰲰", "󰁄"]
+    },
+
+    // configures an icon to be displayed
+    "custom/icon": {
+        "exec": "echo '󰣠 '",
+        "format": "{}"
+    },
+
+    // configures a shortcut for audio settings
+    // todo: expand this.
+    "custom/sound": {
+        "format": "{}",
+        "exec": "echo '󰓃'",
+        //"exec": "modules/bluetooth",
+        //"on-click-right": "python3 ~/.config/waybar/modules/bluetooth-tooltip.py",
+        "on-click": "/usr/bin/pavucontrol"
+    },
+
+    // configures battery status
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 20,
+            "critical": 10
+        },
+        "interval": 4,
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-charging-alt": "{icon} {time}%",
+        "format-alt": "{icon} {time}%",
+        //"format-good": "󱟢", // An empty format will hide the module
+        "format-full": "󰁹",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"]
+    }
+
+}
