@@ -1,7 +1,7 @@
 # My Dotfiles for FreeBSD
 
 ## zsh
-1. Copy to ~/.config
+1. Copy to ~/.config/
 2. Run `getplugins.sh` -> this fetches plugins from GitHub
 ```bash
 ./getplugins.sh
@@ -11,3 +11,8 @@
 ln -s ~/.config/zshrc ~/.zshrc
 ```
 4. (optional) modify aliases or zshrc depending on your needs/tastes
+
+## alacritty
+1. Copy to ~/.config/
+
+
