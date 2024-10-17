@@ -33,9 +33,8 @@ riverctl map normal Super+Shift S spawn 'grim -g "$(slurp -d)" - | wl-copy -t im
 riverctl map normal Super Return spawn alacritty
 
 ## start app-launcher
-riverctl map normal Super D spawn 'tofi-drun | xargs -d \" riverctl spawn'
 
-riverctl map normal Super D spawn 'tofi-drun | tr -d '\"' | xargs "riverctl spawn'
+riverctl map normal Super D spawn 'tofi-drun | tr -d "\"" | xargs "riverctl spawn'
 
 # close window
 riverctl map normal Super Q close
